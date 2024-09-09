@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CashStocks</string>
+    <string name="api_name">Get Api</string>
+    <string name="empty_list">Empty List</string>
+    <string name="stocks_loading_error_text">Sorry, there is an error on loading stocks</string>
+    <string name="show_less">Show less</string>
+    <string name="show_more">Show more</string>
+
+    <string name="henry_test_app">"Henry testing app!</string>
+    <string name="stock_btn">Stocks</string>
+    <string name="no_stock_btn">No Stocks</string>
+    <string name="error_btn">Error</string>
+    <string name="api">Henry api</string>
+    <string name="back">Back</string>
+    <string name="loading">Loading!</string>
+    <string name="no_stock">No Stock!</string>
+    <string name="error">Error!</string>
+    <string name="see_details">See details</string>
+    <string name="testig">testing</string>
+</resources>
