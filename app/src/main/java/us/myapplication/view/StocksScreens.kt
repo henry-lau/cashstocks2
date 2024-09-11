@@ -23,8 +23,7 @@ import us.myapplication.theme.HenryTheme
 
 @Composable
 private fun LoadingContent(
-    loadingContent: @Composable () -> Unit,
-    callApi: () -> Unit
+    loadingContent: @Composable () -> Unit, callApi: () -> Unit
 ) {
     loadingContent()
     callApi()
@@ -47,8 +46,7 @@ fun StocksScreen(
         Surface(modifier) { ShowStocks(onUiStateChanged.value, onNavigateToStock) }
 
         LoadingContent(
-            loadingContent = { ShowMessage(stringResource(R.string.loading)) },
-            callApi = onCallApi
+            loadingContent = { ShowMessage(stringResource(R.string.loading)) }, callApi = onCallApi
         )
     }
 }
@@ -73,8 +71,7 @@ fun NoStockScreen(
         }
 
         LoadingContent(
-            loadingContent = { ShowMessage(stringResource(R.string.loading)) },
-            callApi = onCallApi
+            loadingContent = { ShowMessage(stringResource(R.string.loading)) }, callApi = onCallApi
         )
     }
 }
@@ -99,8 +96,7 @@ fun ErrorScreen(
         }
 
         LoadingContent(
-            loadingContent = { ShowMessage(stringResource(R.string.loading)) },
-            callApi = onCallApi
+            loadingContent = { ShowMessage(stringResource(R.string.loading)) }, callApi = onCallApi
         )
     }
 }
@@ -190,11 +186,8 @@ fun ShowStocks() {
     HenryTheme {
         ShowStocks(
             StocksUiState(
-                arrayListOf(Stock("ticker", "name", "currency", 99, 10, 100)),
-                isLoading = false
-            ),
-            onNavigateToStock = { _, _ -> },
-            Modifier.fillMaxSize()
+                arrayListOf(Stock("ticker", "name", "currency", 99, 10, 100)), isLoading = false
+            ), onNavigateToStock = { _, _ -> }, Modifier.fillMaxSize()
         )
     }
 }
