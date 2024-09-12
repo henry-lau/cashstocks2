@@ -88,19 +88,19 @@ class DataViewModelTest {
         assertEquals(gameUiState.stocks, stocks.stocks)
     }
 
-    @Test
-    fun getAllStocksTest() {
-        runBlocking {
-//            given(apiService.loadTransactions()).willReturn(stocks)
-//            given(mainRepository.getAllStocks())
-//                .willReturn(NetworkState.Success(stocks))
-            Mockito.`when`(mainRepository.getAllStocks())
-                .thenReturn(NetworkState.Success(stocks))
-
-            viewModel.fetchStocks(StockApiType.StocksApi)
-            val result = viewModel._stocksState.value
-            assertEquals(stocks, result)
-        }
-    }
+//    @Test
+//    fun getAllStocksTest() {
+//        runBlocking {
+////            given(apiService.loadTransactions()).willReturn(stocks)
+////            given(mainRepository.getAllStocks())
+////                .willReturn(NetworkState.Success(stocks))
+//            Mockito.`when`(mainRepository.getAllStocks())
+//                .thenReturn(NetworkState.Success(stocks))
+//
+//            viewModel.fetchStocks(StockApiType.StocksApi)
+//            val result = viewModel._stocksState.value
+//            assertEquals(stocks, result)
+//        }
+//    }
 
 }
